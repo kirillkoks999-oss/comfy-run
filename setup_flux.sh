@@ -43,6 +43,11 @@ curl -L -H "Authorization: Bearer $CIVITAI_API_KEY" \
 curl -L -H "Authorization: Bearer $CIVITAI_API_KEY" \
     -o ComfyUI/models/checkpoints/flux_checkpoint_bf16.safetensors \
     "https://civitai.com/api/download/models/1319700?type=Model&format=SafeTensor&size=full&fp=bf16"
+# Download workflow
+echo ""
+echo "Downloading workflow..."
+wget -c -O ComfyUI/user/default/workflows/flux_text.json \
+    "https://raw.githubusercontent.com/kirillkoks999-oss/comfy-run/main/flux_text.json"
 
 echo ""
 echo "=========================================="
